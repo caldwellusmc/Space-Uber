@@ -8,6 +8,7 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
+using SpaceUber.Data;
 using SpaceUber.WebMVC.Models;
 
 namespace SpaceUber.WebMVC.Controllers

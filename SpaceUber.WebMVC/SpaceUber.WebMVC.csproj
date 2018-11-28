@@ -180,7 +180,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -257,6 +256,20 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SpaceUber.Data\SpaceUber.Data.csproj">
+      <Project>{38045cb4-b0fd-4e26-b326-e84fbebc2960}</Project>
+      <Name>SpaceUber.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SpaceUber.Models\SpaceUber.Models.csproj">
+      <Project>{e2ae9d20-9ae6-4202-b8e5-03ab901e711b}</Project>
+      <Name>SpaceUber.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SpaceUber.Services\SpaceUber.Services.csproj">
+      <Project>{cbc3285e-7665-4a86-a70d-d2f2a8a48992}</Project>
+      <Name>SpaceUber.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

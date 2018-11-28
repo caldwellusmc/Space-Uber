@@ -5,6 +5,16 @@ VisualStudioVersion = 15.0.28306.52
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceUber.WebMVC", "SpaceUber.WebMVC\SpaceUber.WebMVC.csproj", "{939EED9A-CC2E-4804-B25B-7FDBE9668D98}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceUber.Data", "SpaceUber.Data\SpaceUber.Data.csproj", "{38045CB4-B0FD-4E26-B326-E84FBEBC2960}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceUber.Models", "SpaceUber.Models\SpaceUber.Models.csproj", "{E2AE9D20-9AE6-4202-B8E5-03AB901E711B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceUber.Contracts", "SpaceUber.Contracts\SpaceUber.Contracts.csproj", "{A1081CB3-809B-40AB-B854-15901301FC4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceUber.Services", "SpaceUber.Services\SpaceUber.Services.csproj", "{CBC3285E-7665-4A86-A70D-D2F2A8A48992}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceUber.Tests", "SpaceUber.Tests\SpaceUber.Tests.csproj", "{043FED2E-FD5B-4912-B9B4-4DD27C9943F7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +25,26 @@ Global
 		{939EED9A-CC2E-4804-B25B-7FDBE9668D98}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{939EED9A-CC2E-4804-B25B-7FDBE9668D98}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{939EED9A-CC2E-4804-B25B-7FDBE9668D98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38045CB4-B0FD-4E26-B326-E84FBEBC2960}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38045CB4-B0FD-4E26-B326-E84FBEBC2960}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38045CB4-B0FD-4E26-B326-E84FBEBC2960}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38045CB4-B0FD-4E26-B326-E84FBEBC2960}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2AE9D20-9AE6-4202-B8E5-03AB901E711B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2AE9D20-9AE6-4202-B8E5-03AB901E711B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2AE9D20-9AE6-4202-B8E5-03AB901E711B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2AE9D20-9AE6-4202-B8E5-03AB901E711B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1081CB3-809B-40AB-B854-15901301FC4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1081CB3-809B-40AB-B854-15901301FC4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1081CB3-809B-40AB-B854-15901301FC4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1081CB3-809B-40AB-B854-15901301FC4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBC3285E-7665-4A86-A70D-D2F2A8A48992}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBC3285E-7665-4A86-A70D-D2F2A8A48992}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBC3285E-7665-4A86-A70D-D2F2A8A48992}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBC3285E-7665-4A86-A70D-D2F2A8A48992}.Release|Any CPU.Build.0 = Release|Any CPU
+		{043FED2E-FD5B-4912-B9B4-4DD27C9943F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{043FED2E-FD5B-4912-B9B4-4DD27C9943F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{043FED2E-FD5B-4912-B9B4-4DD27C9943F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{043FED2E-FD5B-4912-B9B4-4DD27C9943F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
