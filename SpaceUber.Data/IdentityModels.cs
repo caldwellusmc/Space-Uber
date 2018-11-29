@@ -33,6 +33,8 @@ namespace SpaceUber.Data
         }
 
         public DbSet<Driver> Drivers { get; set; }
+        public DbSet<Rider> Riders { get; set; }
+        public DbSet<Review> Reviews { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
