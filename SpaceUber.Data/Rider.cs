@@ -25,6 +25,5 @@ namespace SpaceUber.Data
         public string Destination { get; set; }
 
 
-        public int ReviewId { get; set; }
     }
 }

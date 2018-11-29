@@ -26,6 +26,5 @@ namespace SpaceUber.Data
 
         public int DriverId { get; set; }
 
-        public int RiderId { get; set; }
     }
 }
