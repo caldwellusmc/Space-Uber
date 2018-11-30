@@ -54,11 +54,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DriverService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SpaceUber.Data\SpaceUber.Data.csproj">
+      <Project>{38045cb4-b0fd-4e26-b326-e84fbebc2960}</Project>
+      <Name>SpaceUber.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SpaceUber.Models\SpaceUber.Models.csproj">
+      <Project>{e2ae9d20-9ae6-4202-b8e5-03ab901e711b}</Project>
+      <Name>SpaceUber.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
