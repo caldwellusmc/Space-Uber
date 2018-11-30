@@ -20,5 +20,13 @@ namespace SpaceUber.WebMVC.Controllers
         {
             return View();
         }
+        public ActionResult Create(DriverCreate model)
+        {
+            if(ModelState.IsValid)
+            {
+
+            }
+            return View(model);
+        }
     }
 }

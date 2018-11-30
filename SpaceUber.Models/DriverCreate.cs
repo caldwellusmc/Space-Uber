@@ -18,7 +18,7 @@ namespace SpaceUber.Models
         public string LastName { get; set; }
 
         [Required]
-        [MinLength(1, ErrorMessage = "Please enter your age")]
+        [MinLength(1, ErrorMessage = "Please enter a valid age")]
         [MaxLength(3, ErrorMessage = "Invalid Response, too many characters")]
         public int Age { get; set; }
 
