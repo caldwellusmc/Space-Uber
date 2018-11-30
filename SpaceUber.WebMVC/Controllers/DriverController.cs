@@ -16,5 +16,9 @@ namespace SpaceUber.WebMVC.Controllers
             var model = new DriverListItem[0];
             return View(model);
         }
+        public ActionResult Create()
+        {
+            return View();
+        }
     }
 }
