@@ -245,11 +245,13 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Driver\Index.cshtml" />
     <Content Include="Views\Driver\Create.cshtml" />
+    <Content Include="Views\Rider\Index.cshtml" />
+    <Content Include="Views\Review\Index.cshtml" />
+    <Content Include="Views\Rider\Create.cshtml" />
+    <Content Include="Views\Review\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Review\" />
-    <Folder Include="Views\Rider\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
