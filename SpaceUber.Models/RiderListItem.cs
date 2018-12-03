@@ -13,6 +13,10 @@ namespace SpaceUber.Models
         public string LastName { get; set; }
         public string Destination { get; set; }
 
-        public override string ToString() => FirstName;
+        // public override string ToString() => FirstName;
+        public override string ToString()
+        {
+            return FirstName;
+        }
     }
 }
