@@ -21,5 +21,16 @@ namespace SpaceUber.WebMVC.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(RiderCreate model)
+        {
+            if(ModelState.IsValid)
+            {
+
+            }
+            return View(model);
+        }
     }
 }
