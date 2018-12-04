@@ -33,5 +33,27 @@ namespace SpaceUber.Services
                 return ctx.SaveChanges() == 1;
             }
         }
+
+        public IEnumerable<RiderListItem> GetRiders()
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                        .Riders
+                        .Where(e => e.OwnerId == _userId)
+                        .Select(
+                            e =>
+                                new RiderListItem
+                                {
+                                    FirstName = e.FirstName,
+                                    LastName = e.LastName,
+                                    Destination = e.Destination
+                                }
+                            );
+
+                return query.ToArray();
+            }
+        }
     }
 }
