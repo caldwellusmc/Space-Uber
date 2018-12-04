@@ -66,7 +66,7 @@ namespace SpaceUber.Services
                 var entity =
                     ctx
                         .Drivers
-                        .Single(e => e.DriverId == driverid && e.OwnerId == _userId);
+                        .Single(e => e.DriverId == driverId && e.OwnerId == _userId);
                 return
                     new DriverDetail
                     {

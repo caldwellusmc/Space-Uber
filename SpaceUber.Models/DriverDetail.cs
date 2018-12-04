@@ -27,6 +27,6 @@ namespace SpaceUber.Models
         [Display(Name ="Spaceship Make")]
         public string SpaceshipMake { get; set; }
 
-        public override string ToString() => $"[{DriverId}";
+        public override string ToString() => $"[{DriverId}]";
     }
 }
