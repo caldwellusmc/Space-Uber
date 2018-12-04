@@ -59,7 +59,7 @@ namespace SpaceUber.Services
             }
         }
 
-        public DriverDetail GetDriverById(int id)
+        public DriverDetail GetDriverById(int driverId)
         {
             using (var ctx = new ApplicationDbContext())
             {
