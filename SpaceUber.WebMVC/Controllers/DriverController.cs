@@ -30,17 +30,26 @@ namespace SpaceUber.WebMVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(DriverCreate model)
         {
-            if(!ModelState.IsValid)
-            {
-                return View(model);
-            }
+            if (!ModelState.IsValid) return View(model);
 
+            var service = CreateDriverService();
+
+            if (service.CreateDriver(model))
+            {
+                TempData["SaveResult"] = "You have been registered!";
+                return RedirectToAction("Index");
+            };
+
+            ModelState.AddModelError("", "Info could not be registered.");
+
+            return View(model);
+        }
+
+        private DriverService CreateDriverService()
+        {
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new DriverService(userId);
-
-            service.CreateDriver(model);
-
-            return RedirectToAction("Index");
+            return service;
         }
     }
 }
