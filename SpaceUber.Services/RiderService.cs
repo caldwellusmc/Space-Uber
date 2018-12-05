@@ -75,5 +75,22 @@ namespace SpaceUber.Services
                     };
             }
         }
+
+        public bool UpdateRider(RiderEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Riders
+                        .Single(e => e.RiderId == model.RiderId && e.OwnerId == _userId);
+
+                entity.FirstName = model.FirstName;
+                entity.LastName = model.LastName;
+                entity.Destination = model.Destination;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }
