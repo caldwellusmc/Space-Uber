@@ -62,6 +62,7 @@
     <Compile Include="ReviewCreate.cs" />
     <Compile Include="ReviewListItem.cs" />
     <Compile Include="RiderCreate.cs" />
+    <Compile Include="RiderDetail.cs" />
     <Compile Include="RiderListItem.cs" />
   </ItemGroup>
   <ItemGroup>

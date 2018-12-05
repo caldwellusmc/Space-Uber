@@ -46,6 +46,14 @@ namespace SpaceUber.WebMVC.Controllers
             return View(model);
         }
 
+        public ActionResult Details(int id)
+        {
+            var svc = CreateRiderService();
+            var model = svc.GetRiderById(id);
+
+            return View(model);
+        }
+
         private RiderService CreateRiderService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());

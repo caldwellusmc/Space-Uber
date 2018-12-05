@@ -55,5 +55,24 @@ namespace SpaceUber.Services
                 return query.ToArray();
             }
         }
+
+        public RiderDetail GetRiderById(int riderId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Riders
+                        .Single(e => e.RiderId == riderId && e.OwnerId == _userId);
+                return
+                    new RiderDetail
+                    {
+                        RiderId = entity.RiderId,
+                        FirstName = entity.FirstName,
+                        LastName = entity.LastName,
+                        Destination = entity.Destination
+                    };
+            }
+        }
     }
 }
