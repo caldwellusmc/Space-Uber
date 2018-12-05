@@ -253,6 +253,7 @@
     <Content Include="Views\Driver\Edit.cshtml" />
     <Content Include="Views\Driver\Delete.cshtml" />
     <Content Include="Views\Rider\Details.cshtml" />
+    <Content Include="Views\Rider\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
