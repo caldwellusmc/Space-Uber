@@ -1,4 +1,6 @@
-﻿using SpaceUber.Models;
+﻿using Microsoft.AspNet.Identity;
+using SpaceUber.Models;
+using SpaceUber.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +15,10 @@ namespace SpaceUber.WebMVC.Controllers
         // GET: Rider
         public ActionResult Index()
         {
-            var model = new RiderListItem[0];
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new RiderService(userId);
+            var model = service.GetRiders();
+
             return View(model);
         }
 
@@ -26,11 +31,17 @@ namespace SpaceUber.WebMVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(RiderCreate model)
         {
-            if(ModelState.IsValid)
+            if(!ModelState.IsValid)
             {
-
+                return View(model);
             }
-            return View(model);
+
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new RiderService(userId);
+
+            service.CreateRider(model);
+
+            return RedirectToAction("Index");
         }
     }
 }
