@@ -31,17 +31,26 @@ namespace SpaceUber.WebMVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(RiderCreate model)
         {
-            if(!ModelState.IsValid)
-            {
-                return View(model);
-            }
+            if (!ModelState.IsValid) return View(model);
 
+            var service = CreateRiderService();
+
+            if (service.CreateRider(model))
+            {
+                TempData["SaveResult"] = "Your ride has been requested!";
+                return RedirectToAction("Index");
+            };
+
+            ModelState.AddModelError("", "Your ride could not be requested.");
+
+            return View(model);
+        }
+
+        private RiderService CreateRiderService()
+        {
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new RiderService(userId);
-
-            service.CreateRider(model);
-
-            return RedirectToAction("Index");
+            return service;
         }
     }
 }
