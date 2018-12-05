@@ -70,6 +70,30 @@ namespace SpaceUber.WebMVC.Controllers
             return View(model);
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(int id, DriverEdit model)
+        {
+            if (!ModelState.IsValid) return View(model);
+
+            if(model.DriverId != id)
+            {
+                ModelState.AddModelError("", "Id Mismatch");
+                return View(model);
+            }
+
+            var service = CreateDriverService();
+
+            if (service.UpdateDriver(model))
+            {
+                TempData["SaveResult"] = "Your info has been updated!";
+                return RedirectToAction("Index");
+            }
+
+            ModelState.AddModelError("", "Your info could not be changed.");
+            return View(model);
+        }
+
         private DriverService CreateDriverService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
