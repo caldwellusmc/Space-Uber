@@ -79,5 +79,24 @@ namespace SpaceUber.Services
                     };
             }
         }
+
+        public bool UpdateDriver(DriverEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Drivers
+                        .Single(e => e.DriverId == model.DriverId && e.OwnerId == _userId);
+
+                entity.FirstName = model.FirstName;
+                entity.LastName = model.LastName;
+                entity.Age = model.Age;
+                entity.LicenseNumber = model.LicenseNumber;
+                entity.SpaceshipMake = model.SpaceshipMake;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }

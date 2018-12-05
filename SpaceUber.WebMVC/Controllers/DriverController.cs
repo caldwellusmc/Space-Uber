@@ -53,6 +53,23 @@ namespace SpaceUber.WebMVC.Controllers
             return View(model);
         }
 
+        public ActionResult Edit(int id)
+        {
+            var service = CreateDriverService();
+            var detail = service.GetDriverById(id);
+            var model =
+                new DriverEdit
+                {
+                    DriverId = detail.DriverId,
+                    FirstName = detail.FirstName,
+                    LastName = detail.LastName,
+                    Age = detail.Age,
+                    LicenseNumber = detail.LicenseNumber,
+                    SpaceshipMake = detail.SpaceshipMake
+                };
+            return View(model);
+        }
+
         private DriverService CreateDriverService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
