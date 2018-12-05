@@ -46,6 +46,7 @@ namespace SpaceUber.Services
                             e =>
                                 new RiderListItem
                                 {
+                                    RiderId = e.RiderId,
                                     FirstName = e.FirstName,
                                     LastName = e.LastName,
                                     Destination = e.Destination
