@@ -93,6 +93,29 @@ namespace SpaceUber.WebMVC.Controllers
             return View(model);
         }
 
+        [ActionName("Delete")]
+        public ActionResult Delete(int id)
+        {
+            var svc = CreateRiderService();
+            var model = svc.GetRiderById(id);
+
+            return View(model);
+        }
+
+        [HttpPost]
+        [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteRider(int id)
+        {
+            var service = CreateRiderService();
+
+            service.DeleteRider(id);
+
+            TempData["SaveResult"] = "Your request has been deleted.";
+
+            return RedirectToAction("Index");
+        }
+
         private RiderService CreateRiderService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());

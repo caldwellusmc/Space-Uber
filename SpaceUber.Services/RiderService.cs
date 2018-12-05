@@ -92,5 +92,20 @@ namespace SpaceUber.Services
                 return ctx.SaveChanges() == 1;
             }
         }
+
+        public bool DeleteRider(int riderId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Riders
+                        .Single(e => e.RiderId == riderId && e.OwnerId == _userId);
+
+                ctx.Riders.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }
