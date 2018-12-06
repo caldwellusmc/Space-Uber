@@ -25,7 +25,8 @@ namespace SpaceUber.Services
                     OwnerId = _userId,
                     FirstName = model.FirstName,
                     LastName = model.LastName,
-                    Description = model.Description
+                    Description = model.Description,
+                    DriverId= model.DriverId
                 };
 
             using (var ctx = new ApplicationDbContext())
@@ -106,6 +107,14 @@ namespace SpaceUber.Services
                 ctx.Reviews.Remove(entity);
 
                 return ctx.SaveChanges() == 1;
+            }
+        }
+
+        public List<Driver> Drivers()
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                return ctx.Drivers.ToList();
             }
         }
     }

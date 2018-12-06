@@ -26,5 +26,7 @@ namespace SpaceUber.Data
 
         public int DriverId { get; set; }
 
+        public virtual Driver Driver { get; set; }
+
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SpaceUber.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -20,6 +21,18 @@ namespace SpaceUber.Models
         [Required]
         [MinLength(1, ErrorMessage = "Please enter a description.")]
         public string Description { get; set; }
+        public int DriverId { get; set; }
+
+        public Driver Driver { get; set; }
+
+
+        private string _fullName;
+
+        public string FullName
+        {
+            get { return _fullName; }
+            set { _fullName = FirstName + " " + LastName; }
+        }
 
         public override string ToString() => FirstName;
     }

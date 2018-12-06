@@ -24,6 +24,10 @@ namespace SpaceUber.WebMVC.Controllers
 
         public ActionResult Create()
         {
+            var svc = CreateReviewService();
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var driverList = new SelectList(svc.Drivers(), "DriverId", "FullName");
+            ViewBag.DriverId = driverList;
             return View();
         }
 
@@ -42,7 +46,7 @@ namespace SpaceUber.WebMVC.Controllers
             };
 
             ModelState.AddModelError("", "Your Review was not created.");
-
+            ViewBag.DriverId = new SelectList(service.Drivers(), "DriverId", "FullName");
             return View(model);
         }
 
@@ -58,6 +62,8 @@ namespace SpaceUber.WebMVC.Controllers
         {
             var service = CreateReviewService();
             var detail = service.GetReviewById(id);
+            var driverList = new SelectList(service.Drivers(), "DriverId", "FullName", detail.DriverId);
+            ViewBag.DriverId = driverList;
             var model =
                 new ReviewEdit
                 {
@@ -90,6 +96,9 @@ namespace SpaceUber.WebMVC.Controllers
             }
 
             ModelState.AddModelError("", "Your review could not be updated.");
+            var driverList = new SelectList(service.Drivers(), "DriverId", "FullName", model.Driver.DriverId);
+            ViewBag.DriverId = driverList;
+            
             return View(model);
         }
 

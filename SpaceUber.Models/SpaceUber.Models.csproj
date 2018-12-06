@@ -72,5 +72,11 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SpaceUber.Data\SpaceUber.Data.csproj">
+      <Project>{38045CB4-B0FD-4E26-B326-E84FBEBC2960}</Project>
+      <Name>SpaceUber.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SpaceUber.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -20,6 +21,11 @@ namespace SpaceUber.Models
 
         [Display(Name ="Description")]
         public string Description { get; set; }
+
+        public int DriverId { get; set; }
+
+        public Driver Driver { get; set; }
+
         public override string ToString() => $"[{ReviewId}]";
     }
 }

@@ -9,7 +9,7 @@ namespace SpaceUber.Models
 {
     public class DriverDetail
     {
-        [Display(Name ="Driver Id")]
+        [Display(Name ="Driver ID")]
         public int DriverId { get; set; }
 
         [Display(Name ="First Name")]

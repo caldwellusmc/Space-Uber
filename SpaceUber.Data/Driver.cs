@@ -30,6 +30,14 @@ namespace SpaceUber.Data
         [Required]
         public string SpaceshipMake { get; set; }
 
-        public int ReviewId { get; set; }
+        private string _fullName;
+
+        public string FullName
+        {
+            get { return _fullName; }
+            set { _fullName = FirstName + " " + LastName; }
+        }
+
+
     }
 }

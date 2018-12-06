@@ -68,6 +68,22 @@
     <Compile Include="Migrations\201812041509576_new.Designer.cs">
       <DependentUpon>201812041509576_new.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812062023500_FKeys.cs" />
+    <Compile Include="Migrations\201812062023500_FKeys.Designer.cs">
+      <DependentUpon>201812062023500_FKeys.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812062041462_addedfullnameprop.cs" />
+    <Compile Include="Migrations\201812062041462_addedfullnameprop.Designer.cs">
+      <DependentUpon>201812062041462_addedfullnameprop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812062044209_updatedproperty.cs" />
+    <Compile Include="Migrations\201812062044209_updatedproperty.Designer.cs">
+      <DependentUpon>201812062044209_updatedproperty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812062055089_addedspaceinprop.cs" />
+    <Compile Include="Migrations\201812062055089_addedspaceinprop.Designer.cs">
+      <DependentUpon>201812062055089_addedspaceinprop.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Review.cs" />
@@ -86,6 +102,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812041509576_new.resx">
       <DependentUpon>201812041509576_new.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812062023500_FKeys.resx">
+      <DependentUpon>201812062023500_FKeys.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812062041462_addedfullnameprop.resx">
+      <DependentUpon>201812062041462_addedfullnameprop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812062044209_updatedproperty.resx">
+      <DependentUpon>201812062044209_updatedproperty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812062055089_addedspaceinprop.resx">
+      <DependentUpon>201812062055089_addedspaceinprop.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
