@@ -47,6 +47,7 @@ namespace SpaceUber.Services
                             e =>
                             new ReviewListItem
                             {
+                                ReviewId = e.ReviewId,
                                 FirstName = e.FirstName,
                                 LastName = e.LastName,
                                 Description = e.Description

@@ -1,4 +1,6 @@
-﻿using SpaceUber.Models;
+﻿using Microsoft.AspNet.Identity;
+using SpaceUber.Models;
+using SpaceUber.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +15,10 @@ namespace SpaceUber.WebMVC.Controllers
         // GET: Review
         public ActionResult Index()
         {
-            var model = new ReviewListItem[0];
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new ReviewService(userId);
+            var model = service.GetReviews();
+
             return View(model);
         }
 
@@ -26,11 +31,17 @@ namespace SpaceUber.WebMVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(ReviewCreate model)
         {
-            if(ModelState.IsValid)
+            if(!ModelState.IsValid)
             {
-
+                return View(model);
             }
-            return View(model);
+
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new ReviewService(userId);
+
+            service.CreateReview(model);
+
+            return RedirectToAction("Index");
         }
     }
 }
