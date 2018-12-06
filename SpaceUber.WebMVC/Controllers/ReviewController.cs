@@ -93,6 +93,29 @@ namespace SpaceUber.WebMVC.Controllers
             return View(model);
         }
 
+        [ActionName("Delete")]
+        public ActionResult Delete(int id)
+        {
+            var svc = CreateReviewService();
+            var model = svc.GetReviewById(id);
+
+            return View(model);
+        }
+
+        [HttpPost]
+        [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeletePost(int id)
+        {
+            var service = CreateReviewService();
+
+            service.DeleteReview(id);
+
+            TempData["SaveResult"] = "Your review has been deleted.";
+
+            return RedirectToAction("Index");
+        }
+
         private ReviewService CreateReviewService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());

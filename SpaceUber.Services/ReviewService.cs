@@ -93,5 +93,20 @@ namespace SpaceUber.Services
                 return ctx.SaveChanges() == 1;
             }
         }
+
+        public bool DeleteReview(int reviewId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Reviews
+                        .Single(e => e.ReviewId == reviewId && e.OwnerId == _userId);
+
+                ctx.Reviews.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }
