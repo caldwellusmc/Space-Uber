@@ -57,5 +57,24 @@ namespace SpaceUber.Services
                 return query.ToArray();
             }
         }
+
+        public ReviewDetail GetReviewById(int reviewId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Reviews
+                        .Single(e => e.ReviewId == reviewId && e.OwnerId == _userId);
+                return
+                    new ReviewDetail
+                    {
+                        ReviewId = entity.ReviewId,
+                        FirstName = entity.FirstName,
+                        LastName = entity.LastName,
+                        Description = entity.Description
+                    };
+            }
+        }
     }
 }
