@@ -31,17 +31,26 @@ namespace SpaceUber.WebMVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(ReviewCreate model)
         {
-            if(!ModelState.IsValid)
-            {
-                return View(model);
-            }
+            if (!ModelState.IsValid) return View(model);
 
+            var service = CreateReviewService();
+
+            if(service.CreateReview(model))
+            {
+                TempData["SaveResult"] = "Thanks for the review!";
+                return RedirectToAction("Index");
+            };
+
+            ModelState.AddModelError("", "Your Review was not created.");
+
+            return View(model);
+        }
+
+        private ReviewService CreateReviewService()
+        {
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new ReviewService(userId);
-
-            service.CreateReview(model);
-
-            return RedirectToAction("Index");
+            return service;
         }
     }
 }
