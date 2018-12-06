@@ -256,6 +256,7 @@
     <Content Include="Views\Rider\Edit.cshtml" />
     <Content Include="Views\Rider\Delete.cshtml" />
     <Content Include="Views\Review\Details.cshtml" />
+    <Content Include="Views\Review\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

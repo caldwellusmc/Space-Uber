@@ -69,6 +69,30 @@ namespace SpaceUber.WebMVC.Controllers
             return View(model);
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(int id, ReviewEdit model)
+        {
+            if (!ModelState.IsValid) return View(model);
+
+            if(model.ReviewId !=id)
+            {
+                ModelState.AddModelError("", "Id Mismatch");
+                return View(model);
+            }
+
+            var service = CreateReviewService();
+
+            if(service.UpdateReview(model))
+            {
+                TempData["SaveResult"] = "Your review has been updated.";
+                return RedirectToAction("Index");
+            }
+
+            ModelState.AddModelError("", "Your review could not be updated.");
+            return View(model);
+        }
+
         private ReviewService CreateReviewService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
