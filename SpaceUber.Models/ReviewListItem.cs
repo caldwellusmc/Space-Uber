@@ -12,10 +12,10 @@ namespace SpaceUber.Models
         [Display(Name ="Review ID")]
         public int ReviewId { get; set; }
 
-        [Display(Name ="First Name")]
+        [Display(Name ="Driver's First Name")]
         public string FirstName { get; set; }
 
-        [Display(Name ="Last Name")]
+        [Display(Name ="Driver's Last Name")]
         public string LastName { get; set; }
 
         [Display(Name ="Description")]
