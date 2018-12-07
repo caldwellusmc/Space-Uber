@@ -21,6 +21,6 @@ namespace SpaceUber.Models
         [Display(Name ="Description")]
         public string Description { get; set; }
 
-        public override string ToString() => FirstName;
+        //public override string ToString() => FirstName;
     }
 }

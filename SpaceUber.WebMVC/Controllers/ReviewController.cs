@@ -68,8 +68,8 @@ namespace SpaceUber.WebMVC.Controllers
                 new ReviewEdit
                 {
                     ReviewId = detail.ReviewId,
-                    FirstName = detail.FirstName,
-                    LastName = detail.LastName,
+                    //FirstName = detail.FirstName,
+                    //LastName = detail.LastName,
                     Description = detail.Description
                 };
             return View(model);

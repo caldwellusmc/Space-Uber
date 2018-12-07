@@ -23,8 +23,8 @@ namespace SpaceUber.Services
                 new Review()
                 {
                     OwnerId = _userId,
-                    FirstName = model.FirstName,
-                    LastName = model.LastName,
+                    //FirstName = model.FirstName,
+                    //LastName = model.LastName,
                     Description = model.Description,
                     DriverId= model.DriverId
                 };
@@ -49,8 +49,8 @@ namespace SpaceUber.Services
                             new ReviewListItem
                             {
                                 ReviewId = e.ReviewId,
-                                FirstName = e.FirstName,
-                                LastName = e.LastName,
+                                FirstName = e.Driver.FirstName,
+                                LastName = e.Driver.LastName,
                                 Description = e.Description
                             }
                         );
@@ -71,8 +71,8 @@ namespace SpaceUber.Services
                     new ReviewDetail
                     {
                         ReviewId = entity.ReviewId,
-                        FirstName = entity.FirstName,
-                        LastName = entity.LastName,
+                        FirstName = entity.Driver.FirstName,
+                        LastName = entity.Driver.LastName,
                         Description = entity.Description
                     };
             }
@@ -87,8 +87,8 @@ namespace SpaceUber.Services
                         .Reviews
                         .Single(e => e.ReviewId == model.ReviewId && e.OwnerId == _userId);
 
-                entity.FirstName = model.FirstName;
-                entity.LastName = model.LastName;
+               // entity.FirstName = model.FirstName;
+                //entity.LastName = model.LastName;
                 entity.Description = model.Description;
 
                 return ctx.SaveChanges() == 1;

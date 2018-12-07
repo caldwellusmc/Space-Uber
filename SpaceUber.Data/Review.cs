@@ -15,11 +15,11 @@ namespace SpaceUber.Data
         [Required]
         public Guid OwnerId { get; set; }
 
-        [Required]
-        public string FirstName { get; set; }
+        //[Required]
+        //public string FirstName { get; set; }
 
-        [Required]
-        public string LastName { get; set; }
+        //[Required]
+        //public string LastName { get; set; }
 
         [Required]
         public string Description { get; set; }
