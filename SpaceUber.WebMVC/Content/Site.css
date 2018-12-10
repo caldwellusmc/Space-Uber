@@ -1,11 +1,13 @@
 ﻿body {
     font-size: 17px;
-    color: navajowhite;
+    color: whitesmoke;
    
     padding-top: 50px;
     padding-bottom: 20px;
 }
+
 .homeindex {
+    text-align: center;
     background: url('images/cosmos-infinity-galaxy-constellation-dark-star-3608029.jpg') center 30%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -31,5 +33,32 @@ textarea {
     max-width: 280px;
 }
 .riderindex {
-    background: aqua;
+    color:whitesmoke;
+    background: url('Images/star-trails-in-the-sky-during-perseid-meteor-shower.jpg') center 30%;
+}
+.contactindex {
+    color:whitesmoke;
+    background: url('Images/NASA-Apollo8-Dec24-Earthrise.jpg') center 57%;
+    background-repeat: no-repeat;
+}
+.navbar {
+    background: url('Images/star-trails-in-the-sky-during-perseid-meteor-shower.jpg');
+    font-size: 22px;
+    color:navajowhite;
+    margin:0px;
+    padding:5px;
+}
+.aboutindex {
+    font-size: 25px;
+    color:whitesmoke;
+    background: url('Images/moon-rising-on-a-purple-sky.jpg');
+}
+.col-md-4{
+    margin-top:1px;
+}
+.col-md-3{
+
+}
+.col-md-5{
+
 }

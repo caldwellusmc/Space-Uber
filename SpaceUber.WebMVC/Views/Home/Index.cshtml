@@ -2,19 +2,17 @@
     ViewBag.Title = "Home Page";
 }
 <body class="homeindex">
-
-<div class="jumbotron">
     <h1>UBER GALACTIC</h1>
     <p class="lead">Uber Galactic is the future of travel. Imagine being able to travel throughout the universe!</p>
-</div>
+
 
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-3">
         <h2>Fly with us!</h2>
         <p>
             Come fly with us as we travel through the heavens! Gain experience flying spaceships and earn money.
         </p>
-        <button>
+        <button class="btn-danger">
             @Html.ActionLink("Fly", "Index", "Driver")
         </button>
 
@@ -24,7 +22,7 @@
         <p>Need a ride to another planet? Or elswhere within the galaxy? How about visiting another galaxy? Our Drivers are ready to take you wherever you want to go!</p>
         <button> @Html.ActionLink("Ride", "Index", "Rider")</button>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-5">
         <h2>About</h2>
         <p>Learn more about us.</p>
         <button> @Html.ActionLink("About", "About", "Home")</button>

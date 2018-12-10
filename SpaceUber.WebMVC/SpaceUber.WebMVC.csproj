@@ -194,6 +194,11 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\andromeda-galaxy-cosmos-dust-262806.jpg" />
     <Content Include="Content\Images\Cosmos-Infinity-Galaxy-Constellation-Dark-Star-3608029.jpg" />
+    <Content Include="Content\Images\Evening-Sky-Long-Exposure-Star-Starry-Sky-Mountains-1946933.jpg" />
+    <Content Include="Content\Images\moon-rising-on-a-purple-sky.jpg" />
+    <Content Include="Content\Images\NASA-Apollo8-Dec24-Earthrise.jpg" />
+    <Content Include="Content\Images\space-2543838_960_720.jpg" />
+    <Content Include="Content\Images\star-trails-in-the-sky-during-perseid-meteor-shower.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
