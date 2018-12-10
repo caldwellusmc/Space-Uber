@@ -1,35 +1,33 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-<style>
-    .jumbotron{
-        background-color: blue
-    }
-</style>
+<body class="homeindex">
+
 <div class="jumbotron">
     <h1>UBER GALACTIC</h1>
     <p class="lead">Uber Galactic is the future of travel. Imagine being able to travel throughout the universe!</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
 </div>
 
 <div class="row">
     <div class="col-md-4">
-        <h2>Getting started</h2>
+        <h2>Fly with us!</h2>
         <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
+            Come fly with us as we travel through the heavens! Gain experience flying spaceships and earn money.
         </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+        <button>
+            @Html.ActionLink("Fly", "Index", "Driver")
+        </button>
+
     </div>
     <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+        <h2>Take a ride through space</h2>
+        <p>Need a ride to another planet? Or elswhere within the galaxy? How about visiting another galaxy? Our Drivers are ready to take you wherever you want to go!</p>
+        <button> @Html.ActionLink("Ride", "Index", "Rider")</button>
     </div>
     <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        <h2>About</h2>
+        <p>Learn more about us.</p>
+        <button> @Html.ActionLink("About", "About", "Home")</button>
     </div>
 </div>
+</body>

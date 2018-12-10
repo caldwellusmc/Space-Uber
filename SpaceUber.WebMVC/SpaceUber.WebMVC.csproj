@@ -192,6 +192,8 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\andromeda-galaxy-cosmos-dust-262806.jpg" />
+    <Content Include="Content\Images\Cosmos-Infinity-Galaxy-Constellation-Dark-Star-3608029.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

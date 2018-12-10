@@ -1,6 +1,14 @@
 ﻿body {
+    font-size: 17px;
+    color: navajowhite;
+   
     padding-top: 50px;
     padding-bottom: 20px;
+}
+.homeindex {
+    background: url('images/cosmos-infinity-galaxy-constellation-dark-star-3608029.jpg') center 30%;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -21,4 +29,7 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+.riderindex {
+    background: aqua;
 }
