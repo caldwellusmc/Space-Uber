@@ -21,7 +21,8 @@
         @TempData["SaveResult"]
     </div>
 }
-<table class="table">
+<table class="table table-hover">
+    <caption>List of Reviews</caption>
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.ReviewId)
@@ -53,9 +54,15 @@
             @Html.DisplayFor(modelItem => item.Description)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ReviewId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ReviewId }) |
+            <button class="btn btn-info">
+            @Html.ActionLink("Edit", "Edit", new { id=item.ReviewId }) 
+            </button>
+            <button class="btn btn-info">
+            @Html.ActionLink("Details", "Details", new { id=item.ReviewId }) 
+            </button>
+            <button class="btn btn-info">
             @Html.ActionLink("Delete", "Delete", new { id=item.ReviewId })
+            </button>
         </td>
     </tr>
 }

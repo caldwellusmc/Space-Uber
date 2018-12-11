@@ -20,7 +20,8 @@
         @TempData["SaveResult"]
     </div>
 }
-<table class="table">
+<table class="table table-hover">
+    <caption>List of Drivers</caption>
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.DriverId)
@@ -64,9 +65,15 @@
             @Html.DisplayFor(modelItem => item.SpaceshipMake)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.DriverId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.DriverId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.DriverId })
+            <button class="btn btn-info">
+                @Html.ActionLink("Edit", "Edit", new { id = item.DriverId })
+            </button>
+            <button class="btn btn-info">
+                @Html.ActionLink("Details", "Details", new { id = item.DriverId })
+            </button>
+            <button class="btn btn-info">
+                @Html.ActionLink("Delete", "Delete", new { id = item.DriverId })
+                </button>
         </td>
     </tr>
 }
