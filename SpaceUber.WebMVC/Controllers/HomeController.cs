@@ -22,7 +22,7 @@ namespace SpaceUber.WebMVC.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Uber Galactic Info.";
+            ViewBag.Message = "Oober Galactic Info.";
 
             return View();
         }

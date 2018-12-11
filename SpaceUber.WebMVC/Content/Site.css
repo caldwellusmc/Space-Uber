@@ -69,3 +69,59 @@ textarea {
 .driverindex {
     background: url('Images/star-trails-in-the-sky-during-perseid-meteor-shower.jpg') center 30%;
 }
+.reviewcreate {
+    background: url('Images/Evening-Sky-Long-Exposure-Star-Starry-Sky-Mountains-1946933.jpg') no-repeat;
+    background-size: 100%;
+}
+.ridercreate {
+    background: url('Images/Evening-Sky-Long-Exposure-Star-Starry-Sky-Mountains-1946933.jpg') no-repeat;
+    background-size: 100%;
+}
+.drivercreate {
+    background: url('Images/Evening-Sky-Long-Exposure-Star-Starry-Sky-Mountains-1946933.jpg') no-repeat;
+    background-size: 100%;
+}
+.loginindex {
+    background: url('Images/space-2543838_960_720.jpg')no-repeat;
+    background-size: 100%;
+}
+.registerindex {
+    background: url('Images/space-2543838_960_720.jpg')no-repeat;
+    background-size: 100%;
+}
+.driveredit {
+    background: url('Images/universe-2250310_960_720.jpg') no-repeat;
+    background-size:100%;
+}
+.rideredit {
+    background: url('Images/universe-2250310_960_720.jpg') no-repeat;
+    background-size: 100%;
+}
+.revieweedit {
+    background: url('Images/universe-2250310_960_720.jpg') no-repeat;
+    background-size: 100%;
+}
+.riderdetail {
+    background: url('Images/Star-Starry-Sky-Milky-Way-Long-Exposure-Galaxy-2051448.jpg')no-repeat;
+    background-size: 100%;
+}
+.reviewdetail {
+    background: url('Images/Star-Starry-Sky-Milky-Way-Long-Exposure-Galaxy-2051448.jpg')no-repeat;
+    background-size: 100%;
+}
+.driverdetail {
+    background: url('Images/Star-Starry-Sky-Milky-Way-Long-Exposure-Galaxy-2051448.jpg')no-repeat;
+    background-size: 100%;
+}
+.driverdelete {
+    background: url('Images/andromeda-galaxy-cosmos-dust-262806.jpg') no-repeat;
+    background-size:100%;
+}
+.riderdelete {
+    background: url('Images/andromeda-galaxy-cosmos-dust-262806.jpg') no-repeat;
+    background-size: 100%;
+}
+.reviewdelete {
+    background: url('Images/andromeda-galaxy-cosmos-dust-262806.jpg') no-repeat;
+    background-size: 100%;
+}

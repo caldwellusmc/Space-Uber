@@ -3,6 +3,7 @@
 @{
     ViewBag.Title = "Delete";
 }
+<body class="reviewdelete">
 
 <h2>Delete</h2>
 
@@ -49,8 +50,9 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <input type="submit" value="Delete" class="btn btn-info" /> |
             @Html.ActionLink("Back to List", "Index")
         </div>
     }
 </div>
+</body>
