@@ -1,6 +1,6 @@
 ﻿body {
     font-size: 17px;
-    color: whitesmoke;
+    color: blue;
    
     padding-top: 50px;
     padding-bottom: 20px;
@@ -52,15 +52,6 @@ textarea {
     font-size: 25px;
     color:whitesmoke;
     background: url('Images/moon-rising-on-a-purple-sky.jpg');
-}
-.col-md-4{
-    margin-top:1px;
-}
-.col-md-3{
-
-}
-.col-md-5{
-
 }
 .reviewindex {
     background: url('Images/star-trails-in-the-sky-during-perseid-meteor-shower.jpg') center 30%;

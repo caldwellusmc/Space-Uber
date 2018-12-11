@@ -47,7 +47,11 @@
         </dl>
     </div>
     <p>
-        @Html.ActionLink("Edit", "Edit", new { id = Model.RiderId }) |
+        <button class="btn btn-info">
+        @Html.ActionLink("Edit", "Edit", new { id = Model.RiderId }) 
+        </button>
+        <button class="btn btn-info">
         @Html.ActionLink("Back to List", "Index")
+        </button>
     </p>
 </body>
