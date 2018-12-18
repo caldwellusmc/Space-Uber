@@ -54,15 +54,15 @@
             @Html.DisplayFor(modelItem => item.Destination)
         </td>
         <td>
-            <button class="btn btn-info">
-            @Html.ActionLink("Edit", "Edit", new { id=item.RiderId }) 
-            </button>
-            <button class="btn btn-info">
-            @Html.ActionLink("Details", "Details", new { id=item.RiderId }) 
-            </button>
-            <button class="btn btn-info">
-            @Html.ActionLink("Delete", "Delete", new { id=item.RiderId })
-            </button>
+            
+            @Html.ActionLink("Edit", "Edit", new { id = item.RiderId }, htmlAttributes: new {@class = "btn btn-info"})
+            
+            
+            @Html.ActionLink("Details", "Details", new { id=item.RiderId }, htmlAttributes: new { @class = "btn btn-info" }) 
+            
+            
+            @Html.ActionLink("Delete", "Delete", new { id=item.RiderId }, htmlAttributes: new { @class = "btn btn-info" })
+           
         </td>
     </tr>
 }

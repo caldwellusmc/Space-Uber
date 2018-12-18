@@ -47,11 +47,7 @@
         </dl>
     </div>
     <p>
-        <button class="btn btn-info">
-        @Html.ActionLink("Edit", "Edit", new { id = Model.RiderId }) 
-        </button>
-        <button class="btn btn-info">
-        @Html.ActionLink("Back to List", "Index")
-        </button>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.RiderId }, htmlAttributes: new { @class = "btn btn-info" }) 
+        @Html.ActionLink("Back to List", "Index", null, htmlAttributes: new {@class = "btn btn-info"})
     </p>
 </body>

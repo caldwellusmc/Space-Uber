@@ -54,15 +54,9 @@
             @Html.DisplayFor(modelItem => item.Description)
         </td>
         <td>
-            <button class="btn btn-info">
-            @Html.ActionLink("Edit", "Edit", new { id=item.ReviewId }) 
-            </button>
-            <button class="btn btn-info">
-            @Html.ActionLink("Details", "Details", new { id=item.ReviewId }) 
-            </button>
-            <button class="btn btn-info">
-            @Html.ActionLink("Delete", "Delete", new { id=item.ReviewId })
-            </button>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ReviewId }, htmlAttributes: new {@class="btn btn-info"})
+            @Html.ActionLink("Details", "Details", new { id=item.ReviewId }, htmlAttributes: new { @class = "btn btn-info" }) 
+            @Html.ActionLink("Delete", "Delete", new { id=item.ReviewId }, htmlAttributes: new { @class = "btn btn-info" })
         </td>
     </tr>
 }

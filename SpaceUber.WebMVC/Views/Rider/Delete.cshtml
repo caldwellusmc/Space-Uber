@@ -52,9 +52,7 @@
 
         <div class="form-actions no-color">
             <input type="submit" value="Delete" class="btn btn-info" /> 
-            <button class="btn btn-info">
-            @Html.ActionLink("Back to List", "Index")
-            </button>
+            @Html.ActionLink("Back to List", "Index", null, htmlAttributes: new {@class ="btn btn-info"})
         </div>
     }
 </div>

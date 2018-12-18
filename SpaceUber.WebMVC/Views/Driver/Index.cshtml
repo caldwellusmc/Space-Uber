@@ -65,15 +65,9 @@
             @Html.DisplayFor(modelItem => item.SpaceshipMake)
         </td>
         <td>
-            <button class="btn btn-info">
-                @Html.ActionLink("Edit", "Edit", new { id = item.DriverId })
-            </button>
-            <button class="btn btn-info">
-                @Html.ActionLink("Details", "Details", new { id = item.DriverId })
-            </button>
-            <button class="btn btn-info">
-                @Html.ActionLink("Delete", "Delete", new { id = item.DriverId })
-                </button>
+                @Html.ActionLink("Edit", "Edit", new { id = item.DriverId }, htmlAttributes: new {@class ="btn btn-info"})
+                @Html.ActionLink("Details", "Details", new { id = item.DriverId }, htmlAttributes: new {@class ="btn btn-info"})
+                @Html.ActionLink("Delete", "Delete", new { id = item.DriverId }, htmlAttributes: new {@class ="btn btn-info"})
         </td>
     </tr>
 }
