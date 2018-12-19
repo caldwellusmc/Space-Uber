@@ -90,6 +90,7 @@ namespace SpaceUber.Services
                // entity.FirstName = model.FirstName;
                 //entity.LastName = model.LastName;
                 entity.Description = model.Description;
+                entity.DriverId = model.DriverId;
 
                 return ctx.SaveChanges() == 1;
             }

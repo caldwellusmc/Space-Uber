@@ -96,8 +96,8 @@ namespace SpaceUber.WebMVC.Controllers
             }
 
             ModelState.AddModelError("", "Your review could not be updated.");
-            //var driverList = new SelectList(service.Drivers(), "DriverId", "FullName", model.Driver.DriverId);
-            //ViewBag.DriverId = driverList;
+            var driverList = new SelectList(service.Drivers(), "DriverId", "FullName", model.Driver.DriverId);
+            ViewBag.DriverId = driverList;
             
             return View(model);
         }
